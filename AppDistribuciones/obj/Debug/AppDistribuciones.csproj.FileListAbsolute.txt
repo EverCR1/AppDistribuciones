@@ -11,3 +11,16 @@ C:\Users\Ever Corazón\source\repos\AppDistribuciones\AppDistribuciones\obj\Debu
 C:\Users\Ever Corazón\source\repos\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.pdb
 C:\Users\Ever Corazón\source\repos\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.frmHipergeometrica.resources
 C:\Users\Ever Corazón\source\repos\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.frmPoisson.resources
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\bin\Debug\AppDistribuciones.exe.config
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\bin\Debug\AppDistribuciones.exe
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\bin\Debug\AppDistribuciones.pdb
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.csproj.AssemblyReference.cache
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.frmHipergeometrica.resources
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.frmPoisson.resources
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.frmPrincipal.resources
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.frmBinomial.resources
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.Properties.Resources.resources
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.csproj.GenerateResource.cache
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.csproj.CoreCompileInputs.cache
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.exe
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.pdb

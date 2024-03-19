@@ -45,6 +45,7 @@ namespace AppDistribuciones
                     if (validarCantidad() && validarP())
                     {
                         CalcularDatosInfinitos();
+                        poissonAproximacion();
                     }
                     else if (!validarCantidad())
                     {
@@ -65,6 +66,7 @@ namespace AppDistribuciones
                             if (validarPobMayor())
                             {
                                 CalcularDatosFinitos();
+                                poissonAproximacion();
                             }
                             else
                             {
@@ -581,6 +583,49 @@ namespace AppDistribuciones
             else
             {
 
+            }
+        }
+
+        private void poissonAproximacion()
+        {
+            if (checkPoisson.Checked)
+            {
+                formulas.u = formulas.getMedia();
+                tablaPoissonBinomial();
+            }
+            else
+            {
+
+            }
+        }
+
+        public void tablaPoissonBinomial()
+        {
+            // Limpiar el DataGridView antes de agregar nuevos datos
+            dataTab2.Rows.Clear();
+
+            // Define las columnas del DataGridView si aún no están definidas
+            if (dataTab2.Columns.Count == 0)
+            {
+                dataTab2.Columns.Add("X", "X");
+                dataTab2.Columns.Add("Binomial", "Binomial");
+                dataTab2.Columns.Add("Poisson", "Poisson");
+                dataTab2.Columns.Add("Diferencia", "Diferencia");
+            }
+
+            // Calcular y agregar los datos a la serie
+            
+            for (int i = 0; i <= formulas.n; i++)
+            {
+                formulas.x = i; // Actualizar el valor de x
+                double binomial = formulas.formBinomial();
+
+                double poisson = formulas.getPoisson();
+
+                double diferencia = binomial - poisson;
+
+                // Agregar fila al DataGridView
+                dataTab2.Rows.Add(i, binomial, poisson, diferencia);
             }
         }
 

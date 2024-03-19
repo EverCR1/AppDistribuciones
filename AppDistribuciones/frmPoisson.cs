@@ -260,7 +260,7 @@ namespace AppDistribuciones
             }
         }
 
-        private bool VerificarTextBoxLlenos()
+        public bool VerificarTextBoxLlenos()
         {
 
             if (!string.IsNullOrWhiteSpace(txtN.Text) &&
@@ -276,7 +276,7 @@ namespace AppDistribuciones
             }
         }
 
-        private bool validarMedia()
+        public bool validarMedia()
         {
             if (!string.IsNullOrWhiteSpace(txtMedia.Text)){
                 double media = double.Parse(txtMedia.Text);
@@ -307,7 +307,7 @@ namespace AppDistribuciones
             
         }
 
-        private bool validarProbExito()
+        public bool validarProbExito()
         {
             double pExito = formulas.p;
 
@@ -389,7 +389,7 @@ namespace AppDistribuciones
                     frmBinomial.txtN.Text = txtN.Text;
                     frmBinomial.txtX.Text = txtX.Text;
                     frmBinomial.txtP.Text = formulas.p.ToString();
-                    frmBinomial.txtQ.Text = formulas.q.ToString();
+                    frmBinomial.txtQ.Text = (1-formulas.p).ToString();
 
                     this.Hide();
                     frmBinomial.ShowDialog();

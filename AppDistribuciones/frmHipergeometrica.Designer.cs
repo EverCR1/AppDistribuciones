@@ -60,8 +60,13 @@
             this.cmbProb = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtAceptacion = new System.Windows.Forms.TextBox();
+            this.checkPoisson = new System.Windows.Forms.CheckBox();
+            this.dataTab2 = new System.Windows.Forms.DataGridView();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataTab1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTab2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataTab1
@@ -69,19 +74,19 @@
             this.dataTab1.AllowUserToAddRows = false;
             this.dataTab1.AllowUserToDeleteRows = false;
             this.dataTab1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTab1.Location = new System.Drawing.Point(656, 424);
+            this.dataTab1.Location = new System.Drawing.Point(371, 506);
             this.dataTab1.Name = "dataTab1";
             this.dataTab1.ReadOnly = true;
             this.dataTab1.RowHeadersWidth = 51;
             this.dataTab1.RowTemplate.Height = 24;
-            this.dataTab1.Size = new System.Drawing.Size(470, 272);
+            this.dataTab1.Size = new System.Drawing.Size(380, 272);
             this.dataTab1.TabIndex = 59;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(389, 494);
+            this.label12.Location = new System.Drawing.Point(389, 388);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 23);
             this.label12.TabIndex = 55;
@@ -91,7 +96,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(389, 424);
+            this.label11.Location = new System.Drawing.Point(389, 318);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 23);
             this.label11.TabIndex = 54;
@@ -100,19 +105,19 @@
             // txtCurtosis
             // 
             this.txtCurtosis.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurtosis.Location = new System.Drawing.Point(371, 520);
+            this.txtCurtosis.Location = new System.Drawing.Point(371, 414);
             this.txtCurtosis.Name = "txtCurtosis";
             this.txtCurtosis.ReadOnly = true;
-            this.txtCurtosis.Size = new System.Drawing.Size(240, 28);
+            this.txtCurtosis.Size = new System.Drawing.Size(105, 28);
             this.txtCurtosis.TabIndex = 53;
             // 
             // txtSesgo
             // 
             this.txtSesgo.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSesgo.Location = new System.Drawing.Point(371, 450);
+            this.txtSesgo.Location = new System.Drawing.Point(371, 344);
             this.txtSesgo.Name = "txtSesgo";
             this.txtSesgo.ReadOnly = true;
-            this.txtSesgo.Size = new System.Drawing.Size(240, 28);
+            this.txtSesgo.Size = new System.Drawing.Size(105, 28);
             this.txtSesgo.TabIndex = 52;
             // 
             // label10
@@ -292,7 +297,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Distribución Binomial";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(586, 300);
+            this.chart1.Size = new System.Drawing.Size(671, 350);
             this.chart1.TabIndex = 32;
             this.chart1.Text = "chart1";
             // 
@@ -350,12 +355,59 @@
             this.txtAceptacion.Size = new System.Drawing.Size(100, 28);
             this.txtAceptacion.TabIndex = 62;
             // 
+            // checkPoisson
+            // 
+            this.checkPoisson.AutoSize = true;
+            this.checkPoisson.Location = new System.Drawing.Point(151, 12);
+            this.checkPoisson.Name = "checkPoisson";
+            this.checkPoisson.Size = new System.Drawing.Size(200, 20);
+            this.checkPoisson.TabIndex = 65;
+            this.checkPoisson.Text = "Poisson como Aproximación";
+            this.checkPoisson.UseVisualStyleBackColor = true;
+            // 
+            // dataTab2
+            // 
+            this.dataTab2.AllowUserToAddRows = false;
+            this.dataTab2.AllowUserToDeleteRows = false;
+            this.dataTab2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTab2.Location = new System.Drawing.Point(769, 506);
+            this.dataTab2.Name = "dataTab2";
+            this.dataTab2.ReadOnly = true;
+            this.dataTab2.RowHeadersWidth = 51;
+            this.dataTab2.RowTemplate.Height = 24;
+            this.dataTab2.Size = new System.Drawing.Size(442, 272);
+            this.dataTab2.TabIndex = 66;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(768, 466);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(443, 28);
+            this.label15.TabIndex = 68;
+            this.label15.Text = "Poisson como Aproximación a Hipergeométrica";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(480, 467);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(168, 28);
+            this.label14.TabIndex = 67;
+            this.label14.Text = "Hipergeométrica";
+            // 
             // frmHipergeometrica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1161, 803);
+            this.ClientSize = new System.Drawing.Size(1223, 803);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.dataTab2);
+            this.Controls.Add(this.checkPoisson);
             this.Controls.Add(this.cmbProb);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtAceptacion);
@@ -390,6 +442,7 @@
             this.Text = "Distribución Hipergeométrica";
             ((System.ComponentModel.ISupportInitialize)(this.dataTab1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTab2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,5 +479,9 @@
         public System.Windows.Forms.TextBox txtX;
         public System.Windows.Forms.TextBox txtN;
         public System.Windows.Forms.TextBox txtK;
+        private System.Windows.Forms.CheckBox checkPoisson;
+        private System.Windows.Forms.DataGridView dataTab2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }
