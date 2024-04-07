@@ -15,11 +15,24 @@ namespace AppDistribuciones
     {
         Formulas formulas = new Formulas();
         ErrorProvider errorP = new ErrorProvider();
+
+        List<Tuple<string, int>> items = new List<Tuple<string, int>>
+        {
+            new Tuple<string, int>(">", 1),
+            new Tuple<string, int>(">=", 2),
+            new Tuple<string, int>("<", 3),
+            new Tuple<string, int>("<=", 4),
+            new Tuple<string, int>("=", 5)
+        };
         public frmPoisson()
         {
             InitializeComponent();
             chart1.MouseWheel += Chart1_MouseWheel;
-            
+            // Asigna los elementos al ComboBox
+            cmbProb.DisplayMember = "Item1"; // Establece el texto visible
+            cmbProb.ValueMember = "Item2"; // Establece el valor asociado
+            cmbProb.DataSource = items; // Asigna la lista de elementos al ComboBox
+
         }
 
         private void btnObtener_Click(object sender, EventArgs e)
@@ -75,7 +88,7 @@ namespace AppDistribuciones
             // Llenar la tabla
             llenarTabla();
 
-            
+            getAceptacion();
         }
 
         private void GenerarGrafico()
@@ -426,6 +439,97 @@ namespace AppDistribuciones
             {
                 txtP.ReadOnly = false;
             }
+        }
+
+        private void ResaltarFila(double valorAceptacion, int tipoComparacion)
+        {
+            DataGridViewCellStyle estiloResaltado = new DataGridViewCellStyle();
+            estiloResaltado.BackColor = Color.LightGreen;
+
+            int indiceFilaResaltada = -1; // Índice de la fila que se resaltará
+
+            // Iterar sobre las filas y encontrar la fila más cercana al valor de aceptación
+            double diferenciaMinima = double.MaxValue;
+            foreach (DataGridViewRow fila in dataTab1.Rows)
+            {
+                double valorFila = Convert.ToDouble(fila.Cells["Porcentaje"].Value);
+
+                // Comparar el valor de la fila con el valor de aceptación según el tipo de comparación
+                bool comparacionValida = false;
+                switch (tipoComparacion)
+                {
+                    case 1: // Mayor que
+                        comparacionValida = valorFila > valorAceptacion;
+                        break;
+                    case 2: // Mayor o igual que
+                        comparacionValida = valorFila >= valorAceptacion;
+                        break;
+                    case 3: // Menor que
+                        comparacionValida = valorFila < valorAceptacion;
+                        break;
+                    case 4: // Menor o igual que
+                        comparacionValida = valorFila <= valorAceptacion;
+                        break;
+                    case 5: // Igual que
+                        if (Math.Abs(valorFila - valorAceptacion) < diferenciaMinima)
+                        {
+                            diferenciaMinima = Math.Abs(valorFila - valorAceptacion);
+                            indiceFilaResaltada = fila.Index;
+                        }
+                        continue;
+                }
+
+                // Si la comparación es válida y la diferencia es menor, actualizar el índice de la fila resaltada
+                if (comparacionValida && Math.Abs(valorFila - valorAceptacion) < diferenciaMinima)
+                {
+                    diferenciaMinima = Math.Abs(valorFila - valorAceptacion);
+                    indiceFilaResaltada = fila.Index;
+                }
+            }
+
+            // Resaltar la fila encontrada (si se encontró alguna)
+            if (indiceFilaResaltada != -1)
+            {
+                dataTab1.Rows[indiceFilaResaltada].DefaultCellStyle = estiloResaltado;
+            }
+            else
+            {
+                // Mensaje de prueba
+                if (tipoComparacion == 5)
+                {
+                    Console.WriteLine("No existe");
+                }
+            }
+        }
+
+        private void getAceptacion()
+        {
+            if (!string.IsNullOrWhiteSpace(txtAceptacion.Text))
+            {
+
+                // Obtener valores del textbox Aceptación y del ComboBox del tipo
+                double valorAceptacion = double.Parse(txtAceptacion.Text);
+                int tipoComparacion = (int)cmbProb.SelectedValue;
+
+                if (valorAceptacion < 0 || valorAceptacion > 100)
+                {
+                    MostrarMensajeError("El porcentaje de valor de aceptación debe estar entre 0 y 100");
+                }
+                else
+                {
+                    ResaltarFila(valorAceptacion, tipoComparacion);
+                }
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private void frmPoisson_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

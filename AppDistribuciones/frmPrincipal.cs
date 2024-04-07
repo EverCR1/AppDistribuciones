@@ -34,5 +34,11 @@ namespace AppDistribuciones
             frmPoisson frmPoisson = new frmPoisson();
             frmPoisson.ShowDialog();
         }
+
+        private void modeloMM1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMM1 frmMM1 = new frmMM1();
+            frmMM1.ShowDialog();
+        }
     }
 }

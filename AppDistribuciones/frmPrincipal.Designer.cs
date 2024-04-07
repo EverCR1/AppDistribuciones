@@ -33,6 +33,8 @@
             this.distribuciónBinomialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.distribuciónHipergeométricaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.distribuciónDePoissonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeloMM1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +42,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.distribucionesToolStripMenuItem});
+            this.distribucionesToolStripMenuItem,
+            this.modelosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -78,6 +81,21 @@
             this.distribuciónDePoissonToolStripMenuItem.Text = "Distribución de Poisson";
             this.distribuciónDePoissonToolStripMenuItem.Click += new System.EventHandler(this.distribuciónDePoissonToolStripMenuItem_Click);
             // 
+            // modelosToolStripMenuItem
+            // 
+            this.modelosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modeloMM1ToolStripMenuItem});
+            this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
+            this.modelosToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.modelosToolStripMenuItem.Text = "Modelos";
+            // 
+            // modeloMM1ToolStripMenuItem
+            // 
+            this.modeloMM1ToolStripMenuItem.Name = "modeloMM1ToolStripMenuItem";
+            this.modeloMM1ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modeloMM1ToolStripMenuItem.Text = "Modelo MM1";
+            this.modeloMM1ToolStripMenuItem.Click += new System.EventHandler(this.modeloMM1ToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -104,6 +122,8 @@
         private System.Windows.Forms.ToolStripMenuItem distribuciónBinomialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem distribuciónHipergeométricaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem distribuciónDePoissonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modelosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modeloMM1ToolStripMenuItem;
     }
 }
 

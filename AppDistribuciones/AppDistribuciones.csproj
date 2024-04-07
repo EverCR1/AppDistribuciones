@@ -53,6 +53,12 @@
     <Compile Include="frmHipergeometrica.Designer.cs">
       <DependentUpon>frmHipergeometrica.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMM1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMM1.Designer.cs">
+      <DependentUpon>frmMM1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPoisson.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmHipergeometrica.resx">
       <DependentUpon>frmHipergeometrica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM1.resx">
+      <DependentUpon>frmMM1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPoisson.resx">
       <DependentUpon>frmPoisson.cs</DependentUpon>

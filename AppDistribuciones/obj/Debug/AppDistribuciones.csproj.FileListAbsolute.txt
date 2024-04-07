@@ -24,3 +24,4 @@ C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulaci�
 C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.csproj.CoreCompileInputs.cache
 C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.exe
 C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.pdb
+C:\Users\Ever Corazón\Desktop\Ever Primer Semestre 2024\Modelación y Simulación 1\AppDistribuciones\AppDistribuciones\obj\Debug\AppDistribuciones.frmMM1.resources

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCurtosis = new System.Windows.Forms.TextBox();
@@ -51,6 +51,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtP = new System.Windows.Forms.TextBox();
             this.txtX = new System.Windows.Forms.TextBox();
+            this.cmbProb = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtAceptacion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTab1)).BeginInit();
             this.SuspendLayout();
@@ -193,16 +196,16 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(619, 59);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Distribución de Poisson";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Distribución de Poisson";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(516, 266);
             this.chart1.TabIndex = 56;
             this.chart1.Text = "chart1";
@@ -259,12 +262,41 @@
             this.txtX.TabIndex = 61;
             this.txtX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtX_KeyPress);
             // 
+            // cmbProb
+            // 
+            this.cmbProb.FormattingEnabled = true;
+            this.cmbProb.Location = new System.Drawing.Point(364, 285);
+            this.cmbProb.Name = "cmbProb";
+            this.cmbProb.Size = new System.Drawing.Size(96, 24);
+            this.cmbProb.TabIndex = 67;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(392, 247);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(144, 23);
+            this.label13.TabIndex = 66;
+            this.label13.Text = "Prob. Aceptación:";
+            // 
+            // txtAceptacion
+            // 
+            this.txtAceptacion.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAceptacion.Location = new System.Drawing.Point(476, 282);
+            this.txtAceptacion.Name = "txtAceptacion";
+            this.txtAceptacion.Size = new System.Drawing.Size(100, 28);
+            this.txtAceptacion.TabIndex = 65;
+            // 
             // frmPoisson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1207, 649);
+            this.Controls.Add(this.cmbProb);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtAceptacion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtP);
@@ -288,6 +320,7 @@
             this.Name = "frmPoisson";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Distribución de Poisson";
+            this.Load += new System.EventHandler(this.frmPoisson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTab1)).EndInit();
             this.ResumeLayout(false);
@@ -316,5 +349,8 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtP;
         public System.Windows.Forms.TextBox txtX;
+        private System.Windows.Forms.ComboBox cmbProb;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtAceptacion;
     }
 }
